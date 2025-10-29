@@ -1,297 +1,301 @@
 <!DOCTYPE html>
 <html lang="ko" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>나의 무지개 네온 코딩 포트폴리오</title>
-    <!-- Tailwind CSS 로드 --><script src="https://cdn.tailwindcss.com"></script>
-    <!-- Inter 폰트 로드 --><link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
-    
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0d0a13; /* 매우 어두운 배경 */
-            color: #ecfeff; /* 밝은 텍스트 */
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 무지개 네온 코딩 포트폴리오</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0a13; /* 매우 어두운 배경 */
+            color: #ecfeff; /* 밝은 텍스트 */
+        }
 
-        /* 무지개 그라데이션 텍스트 */
-        .rainbow-text {
-            background: linear-gradient(to right, 
-                #ff007f, /* 핫핑크 */
-                #ff7f00, /* 오렌지 */
-                #ffff00, /* 옐로우 */
-                #00ff00, /* 라임그린 */
-                #00ffff, /* 시안 */
-                #8a2be2, /* 블루 바이올렛 */
-                #ff007f /* 핫핑크 (반복하여 자연스러운 그라데이션) */
-            );
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-size: 200% auto;
-            animation: rainbowShift 5s linear infinite;
-        }
+        /* 무지개 그라데이션 텍스트 */
+        .rainbow-text {
+            background: linear-gradient(to right, 
+                #ff007f, /* 핫핑크 */
+                #ff7f00, /* 오렌지 */
+                #ffff00, /* 옐로우 */
+                #00ff00, /* 라임그린 */
+                #00ffff, /* 시안 */
+                #8a2be2, /* 블루 바이올렛 */
+                #ff007f /* 핫핑크 (반복하여 자연스러운 그라데이션) */
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: rainbowShift 5s linear infinite;
+        }
 
-        @keyframes rainbowShift {
-            to {
-                background-position: 200% center;
-            }
-        }
+        @keyframes rainbowShift {
+            to {
+                background-position: 200% center;
+            }
+        }
 
-        /* 네온 그림자 효과 */
-        .neon-shadow {
-            text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 15px #ff007f, 0 0 20px #ff007f;
-        }
-        .neon-button {
-            box-shadow: 0 0 8px #00ffff, 0 0 15px #00ffff, 0 0 20px #00ffff;
-            transition: all 0.3s ease-in-out;
-        }
-        .neon-button:hover {
-            box-shadow: 0 0 12px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff;
-            transform: scale(1.05);
-        }
+        /* 네온 그림자 효과 */
+        .neon-shadow {
+            text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 15px #ff007f, 0 0 20px #ff007f;
+        }
+        .neon-button {
+            box-shadow: 0 0 8px #00ffff, 0 0 15px #00ffff, 0 0 20px #00ffff;
+            transition: all 0.3s ease-in-out;
+        }
+        .neon-button:hover {
+            box-shadow: 0 0 12px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff;
+            transform: scale(1.05);
+        }
 
-        /* 타이핑 효과를 위한 커서 애니메이션 */
-        .typewriter h1 {
-            overflow: hidden; 
-            border-right: .15em solid #00ff00; /* 형광 그린 커서 */
-            white-space: nowrap; 
-            margin: 0 auto;
-            letter-spacing: .15em;
-            animation: 
-                typing 3.5s steps(30, end),
-                blink-caret .75s step-end infinite;
-        }
+        /* 타이핑 효과를 위한 커서 애니메이션 */
+        .typewriter h1 {
+            overflow: hidden; 
+            border-right: .15em solid #00ff00; /* 형광 그린 커서 */
+            white-space: nowrap; 
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: 
+                typing 3.5s steps(30, end),
+                blink-caret .75s step-end infinite;
+        }
 
-        /* 타이핑 애니메이션 */
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
+        /* 타이핑 애니메이션 */
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
 
-        /* 커서 깜빡임 애니메이션 */
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: #00ff00; } /* 형광 그린 */
-        }
+        /* 커서 깜빡임 애니메이션 */
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #00ff00; } /* 형광 그린 */
+        }
 
-        /* 프로젝트 카드 호버 시 부드러운 확대 효과 */
-        .project-card {
-            background-color: #1a1523; /* 어두운 카드 배경 */
-            border: 2px solid transparent;
-            border-image: linear-gradient(to right, #ff007f, #00ffff);
-            border-image-slice: 1;
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
-            box-shadow: 0 0 5px rgba(0,255,255,0.3); /* 연한 시안 그림자 */
-        }
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 0 15px #00ffff, 0 0 25px #00ffff, 0 0 35px #00ffff; /* 강한 시안 네온 그림자 */
-            border-image: linear-gradient(to right, #ff007f, #00ff00, #ffff00, #ff007f); /* 호버 시 테두리 그라데이션 변경 */
-            border-image-slice: 1;
-        }
-        
-        /* 스크롤바 커스터마이징 (선택 사항) */
-        ::-webkit-scrollbar {
-            width: 12px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0d0a13;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(to bottom, #ff007f, #00ffff);
-            border-radius: 6px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(to bottom, #ff7f00, #00ff00);
-        }
-    </style>
+        /* 프로젝트 카드 호버 시 부드러운 확대 효과 */
+        .project-card {
+            background-color: #1a1523; /* 어두운 카드 배경 */
+            border: 2px solid transparent;
+            border-image: linear-gradient(to right, #ff007f, #00ffff);
+            border-image-slice: 1;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+            box-shadow: 0 0 5px rgba(0,255,255,0.3); /* 연한 시안 그림자 */
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 15px #00ffff, 0 0 25px #00ffff, 0 0 35px #00ffff; /* 강한 시안 네온 그림자 */
+            border-image: linear-gradient(to right, #ff007f, #00ff00, #ffff00, #ff007f); /* 호버 시 테두리 그라데이션 변경 */
+            border-image-slice: 1;
+        }
+        
+        /* 스크롤바 커스터마이징 (선택 사항) */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0d0a13;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #ff007f, #00ffff);
+            border-radius: 6px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(to bottom, #ff7f00, #00ff00);
+        }
+    </style>
 </head>
 <body class="bg-gray-950 text-emerald-50">
 
-    <!-- 헤더 및 네비게이션 바 --><header class="bg-gradient-to-r from-purple-900 via-pink-900 to-red-900/80 backdrop-blur-md sticky top-0 z-50 w-full shadow-lg">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <!-- 로고/이름 --><a href="#home" class="text-2xl font-black rainbow-text hover:text-white transition-colors">
-                Rainbow Neon
-            </a>
-            
-            <!-- 데스크탑 메뉴 --><div class="hidden md:flex space-x-6">
-                <a href="#home" class="text-cyan-300 hover:text-white hover:neon-shadow transition-all">홈</a>
-                <a href="#projects" class="text-lime-300 hover:text-white hover:neon-shadow transition-all">프로젝트</a>
-                <a href="#about" class="text-pink-300 hover:text-white hover:neon-shadow transition-all">소개</a>
+    <header class="bg-gradient-to-r from-purple-900 via-pink-900 to-red-900/80 backdrop-blur-md sticky top-0 z-50 w-full shadow-lg">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-black rainbow-text hover:text-white transition-colors">
+                Rainbow Neon
+            </a>
+            
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="text-cyan-300 hover:text-white hover:neon-shadow transition-all">홈</a>
+                <a href="#projects" class="text-lime-300 hover:text-white hover:neon-shadow transition-all">프로젝트</a>
+                <a href="#about" class="text-pink-300 hover:text-white hover:neon-shadow transition-all">소개</a>
+                <a href="https://claude.ai/public/artifacts/1a66f96a-786c-4eb8-ac5b-854c6a9841ad" target="_blank" rel="noopener noreferrer" class="text-red-300 hover:text-white hover:neon-shadow transition-all">아티팩트 1</a>
+                <a href="https://claude.ai/public/artifacts/5ca31f59-0af6-4934-bd6d-5266c8c9ad30" target="_blank" rel="noopener noreferrer" class="text-indigo-300 hover:text-white hover:neon-shadow transition-all">아티팩트 2</a>
                 <a href="#contact" class="text-yellow-300 hover:text-white hover:neon-shadow transition-all">연락</a>
-            </div>
-            
-            <!-- 모바일 메뉴 버튼 (햄버거) --><button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-md text-emerald-300 hover:text-white hover:bg-gray-700">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
-            </button>
-        </nav>
-        
-        <!-- 모바일 메뉴 (숨겨진 상태) --><div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2 bg-gradient-to-r from-purple-800 to-pink-800">
-            <a href="#home" class="block text-cyan-200 hover:text-white hover:bg-purple-700 px-3 py-2 rounded-md transition-colors">홈</a>
-            <a href="#projects" class="block text-lime-200 hover:text-white hover:bg-pink-700 px-3 py-2 rounded-md transition-colors">프로젝트</a>
-            <a href="#about" class="block text-pink-200 hover:text-white hover:bg-purple-700 px-3 py-2 rounded-md transition-colors">소개</a>
-            <a href="#contact" class="block text-yellow-200 hover:text-white hover:bg-pink-700 px-3 py-2 rounded-md transition-colors">연락</a>
-        </div>
-    </header>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden flex items-center p-2 rounded-md text-emerald-300 hover:text-white hover:bg-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+        
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2 bg-gradient-to-r from-purple-800 to-pink-800">
+            <a href="#home" class="block text-cyan-200 hover:text-white hover:bg-purple-700 px-3 py-2 rounded-md transition-colors">홈</a>
+            <a href="#projects" class="block text-lime-200 hover:text-white hover:bg-pink-700 px-3 py-2 rounded-md transition-colors">프로젝트</a>
+            <a href="#about" class="block text-pink-200 hover:text-white hover:bg-purple-700 px-3 py-2 rounded-md transition-colors">소개</a>
+            <a href="https://claude.ai/public/artifacts/1a66f96a-786c-4eb8-ac5b-854c6a9841ad" target="_blank" rel="noopener noreferrer" class="block text-red-200 hover:text-white hover:bg-pink-700 px-3 py-2 rounded-md transition-colors">아티팩트 1</a>
+            <a href="https://claude.ai/public/artifacts/5ca31f59-0af6-4934-bd6d-5266c8c9ad30" target="_blank" rel="noopener noreferrer" class="block text-indigo-200 hover:text-white hover:bg-purple-700 px-3 py-2 rounded-md transition-colors">아티팩트 2</a>
+            <a href="#contact" class="block text-yellow-200 hover:text-white hover:bg-pink-700 px-3 py-2 rounded-md transition-colors">연락</a>
+        </div>
+    </header>
 
-    <!-- 메인 콘텐츠 --><main>
-        <!-- 1. 홈 (히어로 섹션) --><section id="home" class="min-h-screen flex items-center justify-center text-center bg-gradient-to-b from-gray-950 via-purple-900 to-red-900 px-6">
-            <div class="max-w-3xl">
-                <div class="typewriter mb-4">
-                    <h1 class="text-4xl md:text-6xl font-black text-white leading-tight rainbow-text neon-shadow">
-                        코드가 무지개처럼 빛난다!
-                    </h1>
-                </div>
-                <p class="text-xl md:text-2xl text-pink-300 mb-8 neon-shadow" style="text-shadow: 0 0 5px #ff007f;">
-                    안녕하세요! 명신여고 1학년, 빛나는 코딩 스킬을 가진 학생입니다.
-                </p>
-                <a href="#projects" class="bg-cyan-500 text-gray-900 font-black py-3 px-8 rounded-full text-lg neon-button">
-                    내 빛나는 프로젝트 보기
-                </a>
-            </div>
-        </section>
+    <main>
+        <section id="home" class="min-h-screen flex items-center justify-center text-center bg-gradient-to-b from-gray-950 via-purple-900 to-red-900 px-6">
+            <div class="max-w-3xl">
+                <div class="typewriter mb-4">
+                    <h1 class="text-4xl md:text-6xl font-black text-white leading-tight rainbow-text neon-shadow">
+                        코드가 무지개처럼 빛난다!
+                    </h1>
+                </div>
+                <p class="text-xl md:text-2xl text-pink-300 mb-8 neon-shadow" style="text-shadow: 0 0 5px #ff007f;">
+                    안녕하세요! 명신여고 1학년, 빛나는 코딩 스킬을 가진 학생입니다.
+                </p>
+                <a href="#projects" class="bg-cyan-500 text-gray-900 font-black py-3 px-8 rounded-full text-lg neon-button">
+                    내 빛나는 프로젝트 보기
+                </a>
+            </div>
+        </section>
 
-        <!-- 2. 프로젝트 섹션 --><section id="projects" class="py-24 bg-gradient-to-b from-red-900 via-purple-900 to-emerald-900">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-black text-center mb-16 rainbow-text neon-shadow">
-                    My Radiant Projects
-                </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    
-                    <!-- 프로젝트 카드 1 (예시) --><div class="rounded-lg shadow-xl overflow-hidden project-card">
-                        <img src="https://placehold.co/600x400/FF007F/FFFFFF?text=Neon+App" 
-                             alt="프로젝트 1 이미지" 
-                             class="w-full h-48 object-cover border-b-2 border-cyan-400"
-                             onerror="this.src='https://placehold.co/600x400/FF007F/FFFFFF?text=Neon+App'">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2 text-pink-300 neon-shadow">네온 빛 앱 (Neon App)</h3>
-                            <p class="text-emerald-200 mb-4">
-                                [앱의 주요 기능이나 목적]을 위해 만들었습니다. [사용한 기술] 등을 활용하여 생동감 있게 구현했어요.
-                            </p>
-                            <div class="flex space-x-4">
-                                <a href="#" class="bg-fuchsia-600 text-white px-4 py-2 rounded-md hover:bg-fuchsia-500 neon-button">Live Demo</a>
-                                <a href="#" class="text-fuchsia-300 hover:text-white transition-colors">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- 프로젝트 카드 2 (예시) --><div class="rounded-lg shadow-xl overflow-hidden project-card">
-                        <img src="https://placehold.co/600x400/00FFFF/000000?text=Rainbow+Chatbot" 
-                             alt="프로젝트 2 이미지" 
-                             class="w-full h-48 object-cover border-b-2 border-lime-400"
-                             onerror="this.src='https://placehold.co/600x400/00FFFF/000000?text=Rainbow+Chatbot'">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2 text-cyan-300 neon-shadow">무지개 챗봇 (Rainbow Chatbot)</h3>
-                            <p class="text-emerald-200 mb-4">
-                                이 챗봇은 [챗봇의 기능]을 수행합니다. [특징]이 있으며, [사용한 API나 기술]을 적용했습니다. 다채로운 대화를 경험하세요!
-                            </p>
-                            <div class="flex space-x-4">
-                                <a href="#" class="bg-teal-500 text-white px-4 py-2 rounded-md hover:bg-teal-400 neon-button">Try It</a>
-                                <a href="#" class="text-teal-300 hover:text-white transition-colors">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
+        <section id="projects" class="py-24 bg-gradient-to-b from-red-900 via-purple-900 to-emerald-900">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-black text-center mb-16 rainbow-text neon-shadow">
+                    My Radiant Projects
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    
+                    <div class="rounded-lg shadow-xl overflow-hidden project-card">
+                        <img src="https://placehold.co/600x400/FF007F/FFFFFF?text=Neon+App" 
+                             alt="프로젝트 1 이미지" 
+                             class="w-full h-48 object-cover border-b-2 border-cyan-400"
+                             onerror="this.src='https://placehold.co/600x400/FF007F/FFFFFF?text=Neon+App'">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 text-pink-300 neon-shadow">네온 빛 앱 (Neon App)</h3>
+                            <p class="text-emerald-200 mb-4">
+                                [앱의 주요 기능이나 목적]을 위해 만들었습니다. [사용한 기술] 등을 활용하여 생동감 있게 구현했어요.
+                            </p>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-fuchsia-600 text-white px-4 py-2 rounded-md hover:bg-fuchsia-500 neon-button">Live Demo</a>
+                                <a href="#" class="text-fuchsia-300 hover:text-white transition-colors">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="rounded-lg shadow-xl overflow-hidden project-card">
+                        <img src="https://placehold.co/600x400/00FFFF/000000?text=Rainbow+Chatbot" 
+                             alt="프로젝트 2 이미지" 
+                             class="w-full h-48 object-cover border-b-2 border-lime-400"
+                             onerror="this.src='https://placehold.co/600x400/00FFFF/000000?text=Rainbow+Chatbot'">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 text-cyan-300 neon-shadow">무지개 챗봇 (Rainbow Chatbot)</h3>
+                            <p class="text-emerald-200 mb-4">
+                                이 챗봇은 [챗봇의 기능]을 수행합니다. [특징]이 있으며, [사용한 API나 기술]을 적용했습니다. 다채로운 대화를 경험하세요!
+                            </p>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-teal-500 text-white px-4 py-2 rounded-md hover:bg-teal-400 neon-button">Try It</a>
+                                <a href="#" class="text-teal-300 hover:text-white transition-colors">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
 
-                    <!-- 프로젝트 카드 3 (예시) --><div class="rounded-lg shadow-xl overflow-hidden project-card">
-                        <img src="https://placehold.co/600x400/FFFF00/000000?text=Glowing+Project" 
-                             alt="프로젝트 3 이미지" 
-                             class="w-full h-48 object-cover border-b-2 border-pink-400"
-                             onerror="this.src='https://placehold.co/600x400/FFFF00/000000?text=Glowing+Project'">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-bold mb-2 text-yellow-300 neon-shadow">빛나는 세 번째 프로젝트</h3>
-                            <p class="text-emerald-200 mb-4">
-                                [프로젝트에 대한 간략한 설명] 눈을 사로잡는 비주얼과 기능으로 만들었어요.
-                            </p>
-                            <div class="flex space-x-4">
-                                <a href="#" class="bg-yellow-500 text-gray-900 px-4 py-2 rounded-md hover:bg-yellow-400 neon-button">View</a>
-                                <a href="#" class="text-yellow-300 hover:text-white transition-colors">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- 여기에 더 많은 프로젝트 카드를 추가할 수 있습니다. --></div>
-            </div>
-        </section>
+                    <div class="rounded-lg shadow-xl overflow-hidden project-card">
+                        <img src="https://placehold.co/600x400/FFFF00/000000?text=Glowing+Project" 
+                             alt="프로젝트 3 이미지" 
+                             class="w-full h-48 object-cover border-b-2 border-pink-400"
+                             onerror="this.src='https://placehold.co/600x400/FFFF00/000000?text=Glowing+Project'">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold mb-2 text-yellow-300 neon-shadow">빛나는 세 번째 프로젝트</h3>
+                            <p class="text-emerald-200 mb-4">
+                                [프로젝트에 대한 간략한 설명] 눈을 사로잡는 비주얼과 기능으로 만들었어요.
+                            </p>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-yellow-500 text-gray-900 px-4 py-2 rounded-md hover:bg-yellow-400 neon-button">View</a>
+                                <a href="#" class="text-yellow-300 hover:text-white transition-colors">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    </div>
+            </div>
+        </section>
 
-        <!-- 3. 소개 섹션 --><section id="about" class="py-24 bg-gradient-to-b from-emerald-900 via-blue-900 to-purple-900">
-            <div class="container mx-auto px-6 max-w-3xl text-center">
-                <h2 class="text-4xl font-black text-center mb-8 rainbow-text neon-shadow">About My Radiant Self</h2>
-                <img src="https://placehold.co/150x150/FF00FF/00FFFF?text=My+Bright+Photo" 
-                     alt="내 사진" 
-                     class="w-40 h-40 rounded-full mx-auto mb-8 border-4 border-lime-400 shadow-lg neon-shadow"
-                     onerror="this.src='https://placehold.co/150x150/FF00FF/00FFFF?text=Me'">
-                <p class="text-lg text-emerald-100 leading-relaxed mb-6">
-                    저는 명신여자고등학교 1학년에 재학 중인, 코딩을 통해 다채로운 아이디어를 현실로 만드는 것을 좋아하는 학생입니다. 
-                    특히 <span class="text-yellow-300 neon-shadow">[관심 있는 분야, 예: 인터랙티브 웹, 게임 개발, 미디어 아트 코딩 등]</span>에 깊은 관심을 가지고 있습니다.
-                </p>
-                <p class="text-lg text-emerald-100 leading-relaxed">
-                    새로운 기술과 화려한 디자인을 접목하여 사용자에게 즐거움을 주는 경험을 제공하는 것이 목표입니다. 
-                    저의 코드가 무지개처럼 빛나고, 네온처럼 강렬하게 기억되기를 바랍니다!
-                </p>
-                <div class="mt-12">
-                    <h3 class="text-2xl font-black text-white mb-4 rainbow-text neon-shadow">My Glowing Skills</h3>
-                    <div class="flex flex-wrap justify-center gap-4">
-                        <!-- 기술 스택 예시 --><span class="bg-gradient-to-r from-red-500 to-pink-500 text-white px-4 py-2 rounded-full font-medium neon-shadow">Python</span>
-                        <span class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full font-medium neon-shadow">JavaScript</span>
-                        <span class="bg-gradient-to-r from-orange-500 to-yellow-500 text-white px-4 py-2 rounded-full font-medium neon-shadow">HTML5</span>
-                        <span class="bg-gradient-to-r from-purple-500 to-fuchsia-500 text-white px-4 py-2 rounded-full font-medium neon-shadow">CSS3</span>
-                        <span class="bg-gradient-to-r from-green-500 to-lime-500 text-white px-4 py-2 rounded-full font-medium neon-shadow">Node.js</span>
-                        <span class="bg-gradient-to-r from-indigo-500 to-teal-500 text-white px-4 py-2 rounded-full font-medium neon-shadow">React</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <section id="about" class="py-24 bg-gradient-to-b from-emerald-900 via-blue-900 to-purple-900">
+            <div class="container mx-auto px-6 max-w-3xl text-center">
+                <h2 class="text-4xl font-black text-center mb-8 rainbow-text neon-shadow">About My Radiant Self</h2>
+                <img src="https://placehold.co/150x150/FF00FF/00FFFF?text=My+Bright+Photo" 
+                     alt="내 사진" 
+                     class="w-40 h-40 rounded-full mx-auto mb-8 border-4 border-lime-400 shadow-lg neon-shadow"
+                     onerror="this.src='https://placehold.co/150x150/FF00FF/00FFFF?text=Me'">
+                <p class="text-lg text-emerald-100 leading-relaxed mb-6">
+                    저는 명신여자고등학교 1학년에 재학 중인, 코딩을 통해 다채로운 아이디어를 현실로 만드는 것을 좋아하는 학생입니다. 
+                    특히 <span class="text-yellow-300 neon-shadow">[관심 있는 분야, 예: 인터랙티브 웹, 게임 개발, 미디어 아트 코딩 등]</span>에 깊은 관심을 가지고 있습니다.
+                </p>
+                <p class="text-lg text-emerald-100 leading-relaxed">
+                    새로운 기술과 화려한 디자인을 접목하여 사용자에게 즐거움을 주는 경험을 제공하는 것이 목표입니다. 
+                    저의 코드가 무지개처럼 빛나고, 네온처럼 강렬하게 기억되기를 바랍니다!
+                </p>
+                <div class="mt-12">
+                    <h3 class="text-2xl font-black text-white mb-4 rainbow-text neon-shadow">My Glowing Skills</h3>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <span class="bg-gradient-to-r from-red-500 to-pink-500 text-white px-4 py-2 rounded-full font-medium neon-shadow">Python</span>
+                        <span class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full font-medium neon-shadow">JavaScript</span>
+                        <span class="bg-gradient-to-r from-orange-500 to-yellow-500 text-white px-4 py-2 rounded-full font-medium neon-shadow">HTML5</span>
+                        <span class="bg-gradient-to-r from-purple-500 to-fuchsia-500 text-white px-4 py-2 rounded-full font-medium neon-shadow">CSS3</span>
+                        <span class="bg-gradient-to-r from-green-500 to-lime-500 text-white px-4 py-2 rounded-full font-medium neon-shadow">Node.js</span>
+                        <span class="bg-gradient-to-r from-indigo-500 to-teal-500 text-white px-4 py-2 rounded-full font-medium neon-shadow">React</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <!-- 4. 연락 섹션 --><section id="contact" class="py-24 bg-gradient-to-b from-purple-900 via-blue-900 to-gray-950">
-            <div class="container mx-auto px-6 max-w-2xl text-center">
-                <h2 class="text-4xl font-black text-center mb-8 rainbow-text neon-shadow">Let's Connect & Shine!</h2>
-                <p class="text-lg text-emerald-100 mb-8">
-                    제 빛나는 프로젝트들에 대해 궁금한 점이 있거나, 함께 멋진 아이디어를 나누고 싶다면 언제든지 연락 주세요!
-                </p>
-                <div class="flex flex-col md:flex-row justify-center gap-6">
-                    <a href="mailto:your-email@example.com" class="bg-lime-500 text-gray-900 font-black py-3 px-8 rounded-full text-lg neon-button">
-                        Email Me
-                    </a>
-                    <a href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer" class="bg-fuchsia-500 text-gray-900 font-black py-3 px-8 rounded-full text-lg neon-button">
-                        Visit My GitHub
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
+        <section id="contact" class="py-24 bg-gradient-to-b from-purple-900 via-blue-900 to-gray-950">
+            <div class="container mx-auto px-6 max-w-2xl text-center">
+                <h2 class="text-4xl font-black text-center mb-8 rainbow-text neon-shadow">Let's Connect & Shine!</h2>
+                <p class="text-lg text-emerald-100 mb-8">
+                    제 빛나는 프로젝트들에 대해 궁금한 점이 있거나, 함께 멋진 아이디어를 나누고 싶다면 언제든지 연락 주세요!
+                </p>
+                <div class="flex flex-col md:flex-row justify-center gap-6">
+                    <a href="mailto:your-email@example.com" class="bg-lime-500 text-gray-900 font-black py-3 px-8 rounded-full text-lg neon-button">
+                        Email Me
+                    </a>
+                    <a href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer" class="bg-fuchsia-500 text-gray-900 font-black py-3 px-8 rounded-full text-lg neon-button">
+                        Visit My GitHub
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <!-- 풋터 --><footer class="bg-gray-950 py-8">
-        <div class="container mx-auto px-6 text-center text-gray-600">
-            <p>&copy; <span id="current-year"></span> [여기에 본인 이름]. All rights reserved. Designed with ✨ and 🌈.</p>
-        </div>
-    </footer>
+    <footer class="bg-gray-950 py-8">
+        <div class="container mx-auto px-6 text-center text-gray-600">
+            <p>&copy; <span id="current-year"></span> [여기에 본인 이름]. All rights reserved. Designed with ✨ and 🌈.</p>
+        </div>
+    </footer>
 
-    <!-- 자바스크립트 --><script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const navLinks = mobileMenu.querySelectorAll('a');
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = mobileMenu.querySelectorAll('a');
 
-            // 모바일 메뉴 토글
-            menuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
+            // 모바일 메뉴 토글
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
 
-            // 모바일 메뉴 링크 클릭 시 메뉴 닫기 (부드러운 스크롤은 HTML의 scroll-smooth가 처리)
-            navLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
-            });
+            // 모바일 메뉴 링크 클릭 시 메뉴 닫기 (부드러운 스크롤은 HTML의 scroll-smooth가 처리)
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
 
-            // 풋터에 현재 연도 자동 표시
-            document.getElementById('current-year').textContent = new Date().getFullYear();
-        });
-    </script>
+            // 풋터에 현재 연도 자동 표시
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        });
+    </script>
 </body>
 </html>
 
